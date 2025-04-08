@@ -21,7 +21,7 @@ public static int[][] calcularCostosMinimos(int[][] T) {
         }
     }
      // Paso 2: Buscamos si es más barato ir haciendo escalas
-     
+
      for (int i = n - 2; i >= 0; i--) { // Empezamos desde el penúltimo embarcadero
 
         for (int j = i + 1; j < n; j++) { // Solo miramos hacia adelante
@@ -39,7 +39,18 @@ public static int[][] calcularCostosMinimos(int[][] T) {
 
     return C; // Devolvemos la matriz con los costos más bajos entre todos los puntos
 }
+// Método para mostrar la matriz de costos
+     public static void mostrarMatriz(int[][] M) {
+        for (int[] fila : M) {
+            for (int valor : fila) {
+                if (valor == Integer.MAX_VALUE) {
+                    System.out.print("INF "); // Imprimimos INF si no hay camino
+                } else {
+                    System.out.print(valor + " ");
+                }
 }
+
+
 
 
 
