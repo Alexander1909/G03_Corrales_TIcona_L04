@@ -5,5 +5,10 @@ public class BinarySearch {
             if (arr[mid] == x)
             return mid;
             if (arr[mid] > x)
-            
+            return binarySearch(arr, lo, mid - 1, x);
+        return binarySearch(arr, mid + 1, hi, x);
     }
+    return -1;
+ }
+            
+    
