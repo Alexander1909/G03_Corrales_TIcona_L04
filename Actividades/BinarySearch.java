@@ -20,7 +20,10 @@ public static void main(String[] args){
     if (position == -1)
         System.out.println("Element notfound !!!");
     else
-    
+    System.out.println("Element found at index:" + position);
+    }
+}
+
 
             
     
