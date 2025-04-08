@@ -15,6 +15,13 @@ public static int moda2(int array[]) {
         maxfrec = free; 
         moda = array[0]; 
         }
+        p = first; 
+    first = p+1; 
+    frec = 1; 
+    }
+    }
+    return moda;
+}
     
 
 
