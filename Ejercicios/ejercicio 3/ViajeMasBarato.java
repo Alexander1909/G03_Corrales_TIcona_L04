@@ -17,5 +17,11 @@ public static int[][] calcularCostosMinimos(int[][] T) {
             }
         }
     }
+     // Paso 2: Buscamos si es más barato ir haciendo escalas
+     for (int i = n - 2; i >= 0; i--) { // Empezamos desde el penúltimo embarcadero
+        for (int j = i + 1; j < n; j++) { // Solo miramos hacia adelante
+            for (int k = i + 1; k < j; k++) { // k es el punto intermedio (escala)
+                // Solo si hay camino válido
+                
 
 
