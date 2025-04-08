@@ -9,5 +9,9 @@ public class dpSolution {
       }
     return subSolutions[rodLength];
 }
-
+public static void main(String[] args) {
+    int[] values = new int[]{3, 7, 1, 3, 9};
+    int rodLength = values.length;
+    System.out.println("El valor maximo: " + getValue(values, rodLength));
+    }
 }
