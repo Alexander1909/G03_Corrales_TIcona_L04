@@ -1,5 +1,5 @@
 package ejercicio 3;
-
+public class ViajeMasBarato {
 // Este método calcula la matriz de costos mínimos
 public static int[][] calcularCostosMinimos(int[][] T) {
     int n = T.length; // Número de embarcaderos
@@ -10,4 +10,12 @@ public static int[][] calcularCostosMinimos(int[][] T) {
         for (int j = 0; j < n; j++) {
             if (i == j) {
                 C[i][j] = 0;
+            } else if (i < j) {
+                C[i][j] = T[i][j]; // Copiamos el costo directo (si existe)
+            } else {
+                C[i][j] = Integer.MAX_VALUE; // No se puede ir hacia atrás en el río
+            }
+        }
+    }
+
 
