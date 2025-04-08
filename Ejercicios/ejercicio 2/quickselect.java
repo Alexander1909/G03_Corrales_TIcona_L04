@@ -8,6 +8,7 @@ public class QuickSelect {
 
     // Método principal que busca el k-ésimo menor elemento
     public static int quickSelect(List<Integer> arr, int k) {
+
         // Caso base: si solo queda un elemento, ese es el resultado
         if (arr.size() == 1) {
             return arr.get(0);
@@ -20,3 +21,24 @@ public class QuickSelect {
         List<Integer> menores = new ArrayList<>();
         List<Integer> iguales = new ArrayList<>();
         List<Integer> mayores = new ArrayList<>();
+
+        // Clasificamos los elementos según el pivote
+        for (int num : arr) {
+            if (num < pivot) {
+                menores.add(num);
+            } else if (num > pivot) {
+                mayores.add(num);
+            } else {
+                iguales.add(num);
+            }
+        }
+        // Verificamos en qué grupo está el k-ésimo menor
+        if (k <= menores.size()) {
+            return quickSelect(menores, k);
+        } else if (k <= menores.size() + iguales.size()) {
+            return pivot;
+        } else {
+            int nuevoK = k - menores.size() - iguales.size();
+            return quickSelect(mayores, nuevoK);
+        }
+    }
