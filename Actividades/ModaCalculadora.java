@@ -27,3 +27,10 @@ public class ModaCalculadora {
             }
             return suma;
     }
+
+    public static void main(String[] args) {
+        // Ejemplo de uso
+        int[] numeros = {1, 2, 3, 2, 4, 2, 5};
+        System.out.println("La moda es: " + modal(numeros)); // Debería imprimir 2
+    }
+}
