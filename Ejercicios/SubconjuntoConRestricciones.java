@@ -22,4 +22,12 @@ public class SubconjuntoConRestricciones {
         // Intentar con el número incluido o sin incluirlo
         return puedeSumar(arr, index + 1, objetivo - actual) || puedeSumar(arr, index + 1, objetivo);
     }
+    public static boolean verificarSuma(int[] entrada) {
+        int n = entrada[0]; // cantidad de números
+        int objetivo = entrada[entrada.length - 1];
+        int[] numeros = new int[n];
+        System.arraycopy(entrada, 1, numeros, 0, n);
+        return puedeSumar(numeros, 0, objetivo);
+    }
+
 }
