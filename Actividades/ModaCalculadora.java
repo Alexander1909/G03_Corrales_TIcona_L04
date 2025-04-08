@@ -14,5 +14,8 @@ public class ModaCalculadora {
             if (free > maxfree) {
                 maxfree = free;
                 moda = array[i];
+            }
+        }
+        return moda;
+    
 
-}
