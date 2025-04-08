@@ -11,7 +11,7 @@ public class BinarySearch {
     return -1;
 }
 
-public static void main(String[] args){
+publc static void main(String[] args){
     BinarySearch ob = new BinarySearch();
     int arr[] = { 1, 2, 3, 4, 5 };
     int n = arr.length;
