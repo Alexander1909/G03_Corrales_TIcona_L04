@@ -48,8 +48,10 @@ public static int[][] calcularCostosMinimos(int[][] T) {
                 } else {
                     System.out.print(valor + " ");
                 }
+                }
+        }
+    } 
 }
-
 
 
 
