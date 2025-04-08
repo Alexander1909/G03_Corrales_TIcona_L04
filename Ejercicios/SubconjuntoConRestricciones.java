@@ -14,5 +14,12 @@ public class SubconjuntoConRestricciones {
         if (esPotenciaDe2(actual)) {
             return puedeSumar(arr, index + 1, objetivo - actual);
         }
-        
+        // Regla 2: si es múltiplo de 5 y el siguiente es impar, no se puede incluir
+        if (actual % 5 == 0 && index + 1 < arr.length && arr[index + 1] % 2 != 0) {
+            return puedeSumar(arr, index + 1, objetivo); // no se incluye
+        }
+
+        // Intentar con el número incluido o sin incluirlo
+        return puedeSumar(arr, index + 1, objetivo - actual) || puedeSumar(arr, index + 1, objetivo);
+    }
 }
